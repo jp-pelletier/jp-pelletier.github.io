@@ -1,6 +1,6 @@
-//*********************************************
+//******************************************
 // AFRAME ROUNDED ANGLES BOX LIGHT COMPONENT
-//*********************************************
+//******************************************
 
 AFRAME.registerComponent('roundedanglesbox', {
     schema:
@@ -55,7 +55,7 @@ AFRAME.registerComponent('roundedanglesbox', {
             });
             const loader = new THREE.CubeTextureLoader();
             loader.setCrossOrigin("");
-            loader.setPath('img/textures/');
+            loader.setPath('imgages/tex/');
 
             var cubeTexture = loader.load([
                 data.cubeMap_negx, data.cubeMap_posz,
@@ -88,7 +88,7 @@ AFRAME.registerComponent('roundedanglesbox', {
             `#include <begin_vertex>`,
             `#include <begin_vertex>
 
-            vec3 signs = sign(position);
+             vec3 signs = sign(position);
             vec3 box = boxSize - vec3(radius);
             box = vec3(max(0.0, box.x), max(0.0, box.y), max(0.0, box.z));
             vec3 p = signs * box;
@@ -101,6 +101,7 @@ AFRAME.registerComponent('roundedanglesbox', {
             );
         };
         this.mesh = new THREE.Mesh(this.geometry, boxMat);
+        this.mesh.frustumCulled = false;
         el.setObject3D('mesh', this.mesh);
     }
 });
