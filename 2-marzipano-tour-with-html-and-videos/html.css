@@ -1,0 +1,62 @@
+.videocontainer {
+  display: flex;
+  background-color: #fff;
+  border: 10px solid #fff;
+  border-radius: 1rem;
+  box-shadow: 10px 10px 20px #222
+}
+
+.videoscreen {
+  border-radius: 0.4rem
+}
+
+.passivescreen {
+  pointer-events : none;
+  background-color: #a5d6ff;
+  border: 10px solid #a5d6ff
+}
+
+.videotitle {
+  color: #000;
+  text-align: center;
+  line-height: 1.4rem;
+  margin-top: 1rem
+}
+
+.window-status {
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 18px;
+  width: 60px;
+  background-color: #fff;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+  text-align: center
+}
+
+.passivescreen .window-status {
+  background-color: #a5d6ff
+}
+
+.bullet {
+  font-size: 40px;
+  line-height: 16px
+}
+
+.red-on {
+  color: #f00
+}
+
+.red-off {
+  color: rgb(122, 4, 4)
+}
+
+.green-on {
+  color: #0f0
+}
+
+.green-off {
+  color: rgb(2, 80, 2)
+}
