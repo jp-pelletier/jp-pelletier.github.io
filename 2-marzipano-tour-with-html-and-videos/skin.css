@@ -1,184 +1,196 @@
 :root {
-  --background-color-1: #9e549d;
-  --background-color-2: #6581ae;
-  --background-color-3: #eeeeee;
-  --border-color-1: #eeeeee;
-  --border-color-2: #6581ae
+	--background-color-1: #9e549d;
+	--background-color-2: #6581ae;
+	--background-color-3: #eeeeee;
+	--border-color-1: #eeeeee;
+	--border-color-2: #6581ae;
 }
 
 /* Skinning the title bar */
 
 #titleBar {
-  top: 12px
+	top: 12px;
 }
 
 #titleBar .sceneName {
-  display: inline-block;
-  width: unset;
-  background-color: var(--background-color-3);
-  border: 2px solid var(--border-color-2);
-  border-radius: 10px;
-  padding: 0.3rem 2rem 0.2rem 2rem;
-  font-size: 1.4rem;
-  color: #6581ae
+	display: inline-block;
+	width: unset;
+	background-color: var(--background-color-3);
+	border: 2px solid var(--border-color-2);
+	border-radius: 10px;
+	padding: 0.3rem 2rem 0.2rem 2rem;
+	font-size: 1.4rem;
+	color: #6581ae;
 }
 
 body.multiple-scenes.mobile #titleBar {
-  left: 0;
-  top: 0;
-  right: 30px
+	left: 0;
+	top: 0;
+	right: 30px;
 }
 
 .mobile #titleBar .sceneName {
-  font-size: 3.5vw;
-  color: #fff;
-  background-color: transparent;
-  border: none
+	font-size: 3.5vw;
+	color: #fff;
+	background-color: transparent;
+	border: none;
+}
+
+@media (max-width: 420px) {
+	.mobile #titleBar .sceneName {
+		display: none;
+	}
+}
+
+.mobile #sceneList {
+	padding-top: 10px;
+	height: auto;
+	max-width: 460px;
 }
 
 #sceneListToggle,
 .mobile #sceneListToggle {
-  top: 12px;
-  left: 12px;
-  width: 62px;
-  height: 40px;
-  padding: 3px;
-  background-color: var(--background-color-1);
-  border-radius: 10px;
-  border: 2px solid var(--border-color-1)
+	top: 12px;
+	left: 12px;
+	width: 62px;
+	height: 40px;
+	padding: 3px;
+	background-color: var(--background-color-1);
+	border-radius: 10px;
+	border: 2px solid var(--border-color-1);
 }
 
 #sceneListToggle .icon,
 .mobile #sceneListToggle .icon {
-  position: relative;
-  top: unset;
-  right: unset;
-  width: 30px;
-  height: 30px;
-  margin: auto
+	position: relative;
+	top: unset;
+	right: unset;
+	width: 30px;
+	height: 30px;
+	margin: auto;
 }
 
 #commandbar {
-  display: inline-block;
-  position: absolute;
-  background-color: var(--background-color-1);
-  top: 12px;
-  right: 120px;
-  border-radius: 10px;
-  border: 2px solid var(--border-color-1);
-  padding: 3px 6px 3px 6px
+	display: inline-block;
+	position: absolute;
+	background-color: var(--background-color-1);
+	top: 12px;
+	right: 12px;
+	border-radius: 10px;
+	border: 2px solid var(--border-color-1);
+	padding: 3px 6px 3px 6px;
 }
 
 #autorotateToggle,
 body.fullscreen-enabled #autorotateToggle,
 body.fullscreen-enabled #fullscreenToggle,
 body.fullscreen-enabled.mobile #autorotateToggle {
-  display: inline-block;
-  position: relative;
-  top: unset;
-  right: unset;
-  width: unset;
-  height: unset;
-  background-color: unset;
-  padding: unset
+	display: inline-block;
+	position: relative;
+	top: unset;
+	right: unset;
+	width: unset;
+	height: unset;
+	background-color: unset;
+	padding: unset;
 }
 
 #autorotateToggle .icon,
 #fullscreenToggle .icon,
 .mobile #autorotateToggle .icon,
 .mobile #fullscreenToggle .icon {
-  position: relative;
-  top: 2px;
-  right: unset;
-  width: 30px;
-  height: 30px;
-  margin: 0px 4px
+	position: relative;
+	top: 2px;
+	right: unset;
+	width: 30px;
+	height: 30px;
+	margin: 0px 4px;
 }
 
 #fullscreenToggle .icon.on {
-  display: none
+	display: none;
 }
 
 #autorotateToggle.enabled .icon.on,
 #autorotateToggle .icon.off,
 #fullscreenToggle .icon.off {
-display: inline-block
+	display: inline-block;
 }
 
 /* Skinning scene list */
 
 #sceneList.enabled {
-    margin-left: 330px
+	margin-left: 330px;
 }
 
 #sceneList {
-    top: 75px;
-    left: -320px;
-    width: 320px;
-    padding: 8px 8px 6px 8px;
-    background-color: var(--background-color-3);
-    border-radius: 10px
+	top: 75px;
+	left: -320px;
+	width: 320px;
+	padding: 8px 8px 6px 8px;
+	background-color: var(--background-color-3);
+	border-radius: 10px;
 }
 
 .mobile #sceneList {
-  padding-top: 10px;
-  height: auto
+	padding-top: 10px;
+	height: auto;
 }
 
 #sceneList .scene {
-  border-bottom: 2px solid var(--border-color-1)
+	border-bottom: 2px solid var(--border-color-1);
 }
 
 #sceneList .scene.current {
-  background-color: var(--background-color-1)
+	background-color: var(--background-color-1);
 }
 
 /* Skinning control buttons */
 
 .viewControlButton {
-  bottom: 8px;
-  left: 50%;
-  width: 40px;
-  height: 40px;
-  padding: 5px;
-  background-color: var(--background-color-2);
-  border: 2px solid var(--border-color-1);
-  border-radius: 8px
+	bottom: 8px;
+	left: 50%;
+	width: 40px;
+	height: 40px;
+	padding: 5px;
+	background-color: var(--background-color-2);
+	border: 2px solid var(--border-color-1);
+	border-radius: 8px;
 }
 
 .viewControlButton .icon {
-  top: 3px;
-  right: 3px
+	top: 3px;
+	right: 3px;
 }
 
 /* Sticking link hotspots icons on background
 linked with index.js data.linkHotspots */
 
 .link-hotspot {
-  margin-left: unset;
-  margin-top: unset
+	margin-left: unset;
+	margin-top: unset;
 }
 
 .mobile .link-hotspot {
-  top: unset
+	top: unset;
 }
 
 /* Skinning link hotspots */
 
 .link-hotspot-tooltip {
-  border: 2px solid var(--border-color-1);
-  background-color: var(--background-color-2)
+	border: 2px solid var(--border-color-1);
+	background-color: var(--background-color-2);
 }
 
 /* Skinning info hotspots */
 
 .info-hotspot .info-hotspot-icon-wrapper {
-  width: 40px;
-  height: 40px
+	width: 40px;
+	height: 40px;
 }
 
 .info-hotspot .info-hotspot-icon {
-  margin: unset
+	margin: unset;
 }
 
 .info-hotspot .info-hotspot-header,
@@ -187,30 +199,30 @@ linked with index.js data.linkHotspots */
 .info-hotspot-modal .info-hotspot-header,
 .info-hotspot-modal .info-hotspot-close-wrapper,
 .info-hotspot-modal .info-hotspot-text {
-  border: 2px solid var(--border-color-1)
+	border: 2px solid var(--border-color-1);
 }
 
 .info-hotspot-modal .info-hotspot-close-wrapper {
-  position: absolute;
-  top: -2px;
-  right: -2px
+	position: absolute;
+	top: -2px;
+	right: -2px;
 }
 
 .info-hotspot .info-hotspot-header,
 .info-hotspot-modal .info-hotspot-header {
-  background-color: var(--background-color-1);
+	background-color: var(--background-color-1);
 }
 
 .info-hotspot .info-hotspot-close-wrapper {
-  left: 258px;
-  background-color: var(--background-color-2)
+	left: 258px;
+	background-color: var(--background-color-2);
 }
 
 .info-hotspot .info-hotspot-text {
-  width: 298px;
-  top: 38px
+	width: 298px;
+	top: 38px;
 }
 
 .info-hotspot-modal .info-hotspot-text {
-  top: 108px
+	top: 108px;
 }
