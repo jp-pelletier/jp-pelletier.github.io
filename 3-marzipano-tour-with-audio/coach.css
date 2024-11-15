@@ -1,83 +1,92 @@
 #coach-container {
-  display: flex;
-  position: absolute;
-  align-items: flex-end;
-  left: 0;
-  bottom: 0;
-  pointer-events: none
+	display: flex;
+	position: absolute;
+	align-items: flex-end;
+	left: 0;
+	bottom: 0;
+	pointer-events: none;
 }
 
 #coach-container .coach {
-  display: flex;
-  position: relative;
-  z-index: 14;
-  pointer-events: auto
+	display: flex;
+	position: relative;
+	z-index: 14;
+	pointer-events: auto;
 }
 
 #coach-container .coach img {
-  height: 35vh
+	height: 35vh;
 }
 
 #coach-container .message {
-  display: block;
-  position: relative;
-  left: -3vh;
-  bottom: 6vh;
-  min-width: 300px;
-  max-width: 640px;
-  background-color: #ffffff;
-  color: black;
-  padding: 0.6em 1em;
-  border: 6px solid #6581ae;
-  border-radius: 15px;
-  opacity: 0;
-  z-index: 12;
-  pointer-events: none;
-  transition: opacity 0.2s;
-  -webkit-transition: opacity 0.2s;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
-  transition: opacity 0.3s, transform 0.3s;
-  -webkit-transform-origin: -2em 50%;
-  transform-origin: -2em 50%;
-  -webkit-transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 30deg);
-  transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 30deg);
-  pointer-events: none
+	display: block;
+	position: relative;
+	left: -3vh;
+	bottom: 6vh;
+	min-width: 300px;
+	max-width: 640px;
+	background-color: #ffffff;
+	color: black;
+	padding: 0.6em 1em;
+	border: 6px solid #6581ae;
+	border-radius: 15px;
+	opacity: 0;
+	z-index: 12;
+	pointer-events: none;
+	transition: opacity 0.2s;
+	-webkit-transition: opacity 0.2s;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+	transition: opacity 0.3s, transform 0.3s;
+	-webkit-transform-origin: -2em 50%;
+	transform-origin: -2em 50%;
+	-webkit-transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 30deg);
+	transform: translate3d(0, 0, 0) rotate3d(1, 1, 1, 30deg);
+	pointer-events: none;
 }
 
 #coach-container .coach:hover + .message {
-  opacity: 1;
-  -webkit-transform: translate3d(0,0,0) rotate3d(0,0,0,0);
-  transform: translate3d(0,0,0) rotate3d(0,0,0,0);
-  pointer-events: auto
+	opacity: 1;
+	-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+	transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0);
+	pointer-events: auto;
 }
 
 #coach-container .message::before {
-  content: '';
-  position: absolute;
-  right: 99%;
-  width: 1.8em;
-  height: 1.8em;
-  top: 50%;
-  margin: -.9em 0 0;
-  background: url(./img/tooltip.svg) no-repeat center center;
-  background-size: 100%
+	content: "";
+	position: absolute;
+	right: 99%;
+	width: 1.8em;
+	height: 1.8em;
+	top: 50%;
+	margin: -0.9em 0 0;
+	background: url(./img/tooltip.svg) no-repeat center center;
+	background-size: 100%;
 }
 
 #coach-container p {
-  font-size: 2.2vh;
-  line-height: 3vh;
-  margin: 1vh;
-  color: #333;
-  text-align: justify
+	font-size: 2.2vh;
+	line-height: 3vh;
+	margin: 1vh;
+	color: #333;
+	text-align: justify;
 }
 
 .mobile #coach-container .message {
-  left: 0;
-  bottom: 36vh
+	position: absolute;
+	left: 0;
+	bottom: 36vh;
+	width: 100vw;
+	font-size: 10px;
+}
+
+.mobile #coach-container p {
+	font-size: 14px;
+	line-height: 16px;
+	margin: 1vh;
 }
 
 .mobile #coach-container .message::before {
-  display: none
+	display: none;
 }
